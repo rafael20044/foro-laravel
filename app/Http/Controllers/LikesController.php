@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Topic;
+use App\Models\Likes;
 use Illuminate\Http\Request;
 
-class TopicController
+class LikesController
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $topics = Topic::all();
-        return view('welcome', ['topics' => $topics]);
+        //
     }
 
     /**
@@ -35,7 +34,7 @@ class TopicController
     /**
      * Display the specified resource.
      */
-    public function show(Topic $topic)
+    public function show(Likes $likes)
     {
         //
     }
@@ -43,7 +42,7 @@ class TopicController
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Topic $topic)
+    public function edit(Likes $likes)
     {
         //
     }
@@ -51,7 +50,7 @@ class TopicController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Topic $topic)
+    public function update(Request $request, Likes $likes)
     {
         //
     }
@@ -59,7 +58,7 @@ class TopicController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Topic $topic)
+    public function destroy(Likes $likes)
     {
         //
     }

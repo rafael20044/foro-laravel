@@ -18,4 +18,8 @@ class Topic extends Model
     {
         return $this->belongsToMany(Tag::class);
     }
+    public function likes()
+    {
+        return $this->hasMany(Likes::class);
+    }
 }
