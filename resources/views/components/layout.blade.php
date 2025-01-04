@@ -21,7 +21,12 @@
         </div>
     </header>
     <div class="sidebar">
-        <p>header 2</p>
+        <nav>
+            <a href="{{ route('home') }}">Home</a>
+            <a href="">Profile</a>
+            <a href="">Questions</a>
+            <a href="">Users</a>
+        </nav>
     </div>
     <main>
         {{ $slot }}
@@ -41,6 +46,7 @@
             "sidebar main main"
             "sidebar main main";
         grid-template-columns: 1fr 3fr 3fr;
+        grid-template-rows: 1fr repeat(2, 45vh);
     }
     header{
         grid-area: header;
@@ -78,7 +84,23 @@
     .sidebar{
         grid-area: sidebar;
         border: 2px solid black;
-        padding: 1rem;
+    }
+    .sidebar nav{
+        margin-top: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-items: center;
+        gap: 0.5rem;
+    }
+    .sidebar nav a{
+        text-decoration: none;
+        border: 2px solid black;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     main{
         grid-area: main;
